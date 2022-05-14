@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { NavHome } from './styles';
+import { NavHome, Logo } from './styles';
 
 const Home: React.FC = () => {
   return (
     <NavHome href="/">
-      <img src="favicon.ico" alt="Karan Melo" />
-      Karan Melo
+      <Logo src="favicon.ico" alt="Karan Melo" />
     </NavHome>
   );
 };
