@@ -8,6 +8,7 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavItem = styled.li`
+  color: inherit;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 300;
@@ -45,4 +46,8 @@ export const NavItemButton = styled.li`
   &:hover {
     box-shadow: 2px 2px 8px -4px black;
   }
+`;
+
+export const Item = styled.a`
+  color: inherit;
 `;

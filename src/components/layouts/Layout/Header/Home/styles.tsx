@@ -5,6 +5,7 @@ export const NavHome = styled.a`
   align-items: center;
   gap: 15px;
 
+  color: inherit;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
@@ -17,4 +18,5 @@ export const NavHome = styled.a`
 
 export const Logo = styled.img`
   display: block;
+  height: 4.8rem;
 `;

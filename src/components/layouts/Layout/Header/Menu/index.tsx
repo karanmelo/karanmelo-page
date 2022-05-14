@@ -1,16 +1,16 @@
 import React from 'react';
 
 import ThemeControl from '../ThemeControl';
-import { NavMenu, NavItem, NavItemButton } from './styles';
+import { NavMenu, NavItem, NavItemButton, Item } from './styles';
 
 const Menu: React.FC = () => {
   return (
     <NavMenu>
       <NavItem>
-        <a href="/">Blog</a>
+        <Item href="/">Blog</Item>
       </NavItem>
       <NavItemButton>
-        <a href="/">Sobre</a>
+        <Item href="/">Sobre</Item>
       </NavItemButton>
       <ThemeControl />
     </NavMenu>
