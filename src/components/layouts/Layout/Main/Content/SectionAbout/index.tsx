@@ -1,14 +1,12 @@
 import React from 'react';
 
 import About from './About';
-import OurValues from './OurValues';
-import { Container } from './styles';
+import { Section } from './styles';
 
 const SectionAbout: React.FC = () => (
-  <Container>
-    <OurValues />
+  <Section id="about">
     <About />
-  </Container>
+  </Section>
 );
 
 export default SectionAbout;
