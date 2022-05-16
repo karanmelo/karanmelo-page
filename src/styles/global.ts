@@ -38,6 +38,8 @@ export default createGlobalStyle`
   html {
     font-size: 45%;
 
+    scroll-behavior: smooth;
+
     ${mediaQueries('sm')`
       font-size: 62.5%;
     `}; /* a cada 1rem será considerada 10px */    
