@@ -17,7 +17,6 @@ export const Title = styled.h2`
 
   font-size: 3rem;
   text-align: center;
-  text-decoration: underline;
 `;
 
 export const Content = styled.div`
