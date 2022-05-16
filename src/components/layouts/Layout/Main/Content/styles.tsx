@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-import TechBackground from '../../../../../assets/tech-background.jpg';
+import { mediaQueries } from 'styles/mediaQueries';
 
 export const Container = styled.div`
   position: relative;
-  margin: -60px 30px 0;
+  margin: -60px 0 0;
 
   border-radius: 8px 8px 0 0;
   overflow: hidden;
@@ -12,5 +12,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  background: url(${TechBackground}) center no-repeat;
+  ${mediaQueries('sm')`
+    padding: 0 8rem;
+  `};
+
+  ${mediaQueries('md')`
+    padding: 0 10%;
+  `};
+
+  ${mediaQueries('lg')`
+    padding: 0 20%;
+  `};
 `;
