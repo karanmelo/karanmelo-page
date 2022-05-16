@@ -29,6 +29,8 @@ export const Container = styled.div<ContainerProps>`
   -o-transition: background-color 0.5s ease-out;
   transition: background-color 0.5s ease-out;
 
+  z-index: 10;
+
   ${mediaQueries('sm')`
     padding: 0 8rem;
   `};
