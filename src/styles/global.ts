@@ -13,6 +13,14 @@ export default createGlobalStyle`
       font-style: normal;
   }
 
+  @font-face {
+      font-family: 'ZenAntique';
+      src: local('ZenAntique'), local('ZenAntique'),
+        url(${'./fonts/ZenAntique-Regular.ttf'}) format('truetype');
+      font-weight: 400;
+      font-style: normal;
+  }
+
   :root {
     --background-theme: ${({ theme }) => theme.colors.body};
     --background-white: #fefefe;
