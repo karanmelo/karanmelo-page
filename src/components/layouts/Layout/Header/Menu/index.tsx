@@ -7,10 +7,10 @@ const Menu: React.FC = () => {
   return (
     <NavMenu>
       <NavItem>
-        <Item href="/">Blog</Item>
+        <Item href="#about">Sobre</Item>
       </NavItem>
       <NavItemButton>
-        <Item href="/">Sobre</Item>
+        <Item href="/contact">Contato</Item>
       </NavItemButton>
       <ThemeControl />
     </NavMenu>
