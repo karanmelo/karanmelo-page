@@ -1,15 +1,21 @@
 import React from 'react';
 
 import SectionAbout from './SectionAbout';
-import SectionDivider from './SectionDivider';
+import {
+  SectionDivider,
+  SectionDividerBackgrounOptions,
+} from './SectionDivider';
+import SectionHistory from './SectionHistory';
 import SectionSkills from './SectionSkills';
 import { Container } from './styles';
 
 const Content: React.FC = () => (
   <Container>
     <SectionAbout />
-    <SectionDivider />
+    <SectionDivider background={SectionDividerBackgrounOptions.FULL_STACK} />
     <SectionSkills />
+    <SectionDivider background={SectionDividerBackgrounOptions.TECH} />
+    <SectionHistory />
   </Container>
 );
 
