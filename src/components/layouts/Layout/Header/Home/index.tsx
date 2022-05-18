@@ -5,7 +5,7 @@ import { NavHome, Logo } from './styles';
 const Home: React.FC = () => {
   return (
     <NavHome href="/">
-      <Logo src="favicon.ico" alt="Karan Melo" />
+      <Logo src="logo.png" alt="Karan Melo" />
     </NavHome>
   );
 };
