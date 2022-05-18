@@ -15,9 +15,9 @@ const About: React.FC = () => {
   });
 
   return (
-    <Container>
+    <Container ref={elementRef}>
       <Title>Quem é Karan?</Title>
-      <Content ref={elementRef} style={getFadeRightStyles(isInViewport)}>
+      <Content style={getFadeRightStyles(isInViewport)}>
         <p>Desenvolvedor Fulll-Stack Javascript</p>
         <p>
           Amante de tecnologia, entusiasta de qualidade de software e boas
