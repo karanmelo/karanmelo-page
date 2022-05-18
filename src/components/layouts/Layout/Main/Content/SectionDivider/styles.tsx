@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
-import TechBackground from '../../../../../../assets/tech-background.jpg';
-
-export const Section = styled.section`
+export const Section = styled.section<{ background: string }>`
   width: 100%;
   height: 12rem;
 
   display: flex;
   flex-direction: column;
 
-  background: url(${TechBackground}) center no-repeat;
+  background: ${({ background }) => `url(${background}) center no-repea`}t;
   background-size: cover;
 `;
