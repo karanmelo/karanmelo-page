@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Home from './Home';
 import Menu from './Menu';
-import { Container } from './styles';
+import * as S from './styles';
 
 const Header: React.FC = () => {
   const [active, setActive] = useState(true);
@@ -18,10 +18,10 @@ const Header: React.FC = () => {
   }, [active]);
 
   return (
-    <Container active={active}>
+    <S.Header active={active}>
       <Home />
       <Menu />
-    </Container>
+    </S.Header>
   );
 };
 

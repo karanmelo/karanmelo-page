@@ -6,7 +6,7 @@ type ContainerProps = {
   active: boolean;
 };
 
-export const Container = styled.div<ContainerProps>`
+export const Header = styled.header<ContainerProps>`
   position: fixed;
   width: 100%;
   min-height: 6.5rem;
