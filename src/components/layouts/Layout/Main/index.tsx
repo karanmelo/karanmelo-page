@@ -2,14 +2,14 @@ import React from 'react';
 
 import Content from './Content';
 import Hero from './Hero';
-import { Container } from './styled';
+import * as S from './styled';
 
 const Main: React.FC = () => {
   return (
-    <Container>
+    <S.Main>
       <Hero />
       <Content />
-    </Container>
+    </S.Main>
   );
 };
 
