@@ -1,12 +1,17 @@
 import React from 'react';
 
 import About from './About';
-import { Section } from './styles';
+import * as S from './styles';
+import { WorkingImage } from './WorkingImage';
 
 const SectionAbout: React.FC = () => (
-  <Section id="about">
-    <About />
-  </Section>
+  <S.Section id="about">
+    <S.Title>Sobre mim</S.Title>
+    <S.Container>
+      <WorkingImage />
+      <About />
+    </S.Container>
+  </S.Section>
 );
 
 export default SectionAbout;
