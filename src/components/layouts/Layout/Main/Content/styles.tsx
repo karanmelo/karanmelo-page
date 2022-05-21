@@ -30,6 +30,6 @@ export const Container = styled.div`
   `};
 
   ${mediaQueries('lg')`
-    padding: 0 20%;
+    padding: 0 15%;
   `};
 `;
