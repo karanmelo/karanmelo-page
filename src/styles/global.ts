@@ -21,6 +21,15 @@ export default createGlobalStyle`
       font-style: normal;
   }
 
+@font-face {
+    font-family: 'Amatic';
+    src: local('Amatic'), local('Amatic'),
+      url(${'./fonts/AmaticSC-Regular.ttf'}) format('truetype'),
+      url(${'./fonts/AmaticSC-Bold.ttf'}) format('truetype');
+    font-weight: 400, 700;
+    font-style: normal;
+}
+
   :root {
     --background-theme: ${({ theme }) => theme.colors.body};
     --background-white: #fefefe;
