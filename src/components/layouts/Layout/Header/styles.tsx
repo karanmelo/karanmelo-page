@@ -9,7 +9,7 @@ type ContainerProps = {
 export const Header = styled.header<ContainerProps>`
   position: fixed;
   width: 100%;
-  min-height: 6.5rem;
+  min-height: 8rem;
   padding: 0 2rem;
 
   display: flex;
@@ -40,6 +40,6 @@ export const Header = styled.header<ContainerProps>`
   `};
 
   ${mediaQueries('lg')`
-    padding: 0 20%;
+    padding: 0 15%;
   `};
 `;
