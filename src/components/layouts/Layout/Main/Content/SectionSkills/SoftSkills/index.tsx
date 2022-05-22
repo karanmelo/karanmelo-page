@@ -9,13 +9,16 @@ export const SoftSkills: React.FC = () => (
     <S.Title>Soft Skills</S.Title>
     <S.Content>
       <S.RatingWrapper>
-        <Rating label="Flexibilidade" value={4} quantity={5} />
-      </S.RatingWrapper>
-      <S.RatingWrapper>
         <Rating label="Colaboração" value={5} quantity={5} />
       </S.RatingWrapper>
       <S.RatingWrapper>
         <Rating label="Comunicação" value={5} quantity={5} />
+      </S.RatingWrapper>
+      <S.RatingWrapper>
+        <Rating label="Proatividade" value={5} quantity={5} />
+      </S.RatingWrapper>
+      <S.RatingWrapper>
+        <Rating label="Flexibilidade" value={4} quantity={5} />
       </S.RatingWrapper>
       <S.RatingWrapper>
         <Rating label="Resiliência" value={4} quantity={5} />
@@ -24,7 +27,7 @@ export const SoftSkills: React.FC = () => (
         <Rating label="Criatividade" value={4} quantity={5} />
       </S.RatingWrapper>
       <S.RatingWrapper>
-        <Rating label="Proatividade" value={5} quantity={5} />
+        <Rating label="Liderança" value={3} quantity={5} />
       </S.RatingWrapper>
     </S.Content>
   </S.Container>
