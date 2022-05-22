@@ -16,21 +16,10 @@ export const Title = styled.h3`
 
   padding: 2rem;
 
+  color: var(--color-light-green);
   font-family: Amatic;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: left;
-`;
-
-export const Content = styled.div`
-  width: 100%;
-
-  padding: 0 2rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
 `;
 
 export const IconsContainer = styled.div`
@@ -39,4 +28,34 @@ export const IconsContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+`;
+
+export const TopSkills = styled.div`
+  display: flex;
+  gap: 15px;
+
+  & > div {
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: translateY(-15px);
+    }
+  }
+`;
+
+export const MoreSkills = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+`;
+
+export const Column = styled.div`
+  width: 100%;
+
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 `;
