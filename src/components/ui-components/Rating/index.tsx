@@ -19,7 +19,7 @@ export const Rating: React.FC<RatingProps> = ({ label, quantity, value }) => {
 
     while (starsList.length < quantity) {
       starsList.push(
-        <StarIcon color={setColor(starsList.length < value)} size={1.6} />
+        <StarIcon color={setColor(starsList.length < value)} size={1.2} />
       );
     }
 
