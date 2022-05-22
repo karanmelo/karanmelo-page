@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-  font-family: ZenAntique;
+  font-family: Roboto;
   font-size: 1.8rem;
   color: ${(props) => props.theme.colors.text};
 `;
@@ -99,6 +99,7 @@ export const Label = styled.div`
   min-width: 35px;
 
   font-size: 1.6rem;
+  font-family: Roboto;
   text-align: end;
   color: ${(props) => props.theme.colors.text};
 `;
