@@ -30,7 +30,7 @@ const About: React.FC<AboutProps> = ({ elementRef }) => {
   return (
     <S.Container>
       <p style={getFadeRightStyles({ visible: isInViewport })}>
-        Meu nome é Karan,
+        Olá, meu nome é Karan.
       </p>
       <p
         style={getFadeRightStyles({
@@ -64,8 +64,17 @@ const About: React.FC<AboutProps> = ({ elementRef }) => {
           delayTimeInSeconds: 2,
         })}
       >
-        Sou um grande entusiasta de novas tecnologias, qualidade de software e
-        boas práticas de desenvolvimento.
+        Sou um grande entusiasta de novas tecnologias, gosto de estudar e
+        discutir sobre qualidade de software, boas práticas de desenvolvimento e
+        nas horas vagas jogar um pouco de CS:GO.
+      </p>
+      <p
+        style={getFadeRightStyles({
+          visible: isInViewport,
+          delayTimeInSeconds: 2,
+        })}
+      >
+        Amo incondicionalmente a minha família.
       </p>
     </S.Container>
   );
