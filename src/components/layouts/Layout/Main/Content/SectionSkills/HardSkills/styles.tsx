@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: 4rem 18rem;
 
   display: flex;
   flex-direction: column;
@@ -12,10 +11,12 @@ export const Container = styled.div`
   gap: 30px;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h3`
   width: 100%;
 
-  font-family: ZenAntique;
+  padding: 2rem;
+
+  font-family: Amatic;
   font-size: 3rem;
   text-align: center;
 `;
@@ -23,11 +24,19 @@ export const Title = styled.h2`
 export const Content = styled.div`
   width: 100%;
 
+  padding: 0 2rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 25px;
+`;
 
-  font-size: 2rem;
+export const IconsContainer = styled.div`
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 `;
