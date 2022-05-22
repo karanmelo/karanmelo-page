@@ -9,6 +9,9 @@ const Menu: React.FC = () => {
       <NavItem>
         <Item href="#about">Sobre</Item>
       </NavItem>
+      <NavItem>
+        <Item href="#skills">Skills</Item>
+      </NavItem>
       <NavItemButton>
         <Item href="/contact">Contato</Item>
       </NavItemButton>
