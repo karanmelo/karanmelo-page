@@ -12,14 +12,6 @@ export const Container = styled.div`
   gap: 30px;
 `;
 
-export const Title = styled.h2`
-  width: 100%;
-
-  font-family: ZenAntique;
-  font-size: 3rem;
-  text-align: center;
-`;
-
 export const Content = styled.div`
   display: flex;
   flex-direction: column;

@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { Container, Title, Content } from './styles';
+import * as S from './styles';
 
 const History: React.FC = () => (
-  <Container>
-    <Title>Um pouco sobre minha história</Title>
-    <Content>
+  <S.Container>
+    <S.Content>
       <ol>
         <li>nata.house</li>
         <li>Zalpy</li>
@@ -14,8 +13,8 @@ const History: React.FC = () => (
         <li>Universidade Jorge Amado</li>
         <li>O resto da vida</li>
       </ol>
-    </Content>
-  </Container>
+    </S.Content>
+  </S.Container>
 );
 
 export default History;

@@ -1,13 +1,14 @@
 import React from 'react';
 
 import History from './History';
-import { Section } from './styles';
+import * as S from './styles';
 
 const SectionHistory: React.FC = () => {
   return (
-    <Section>
+    <S.Section id="history">
+      <S.Title>Um pouco sobre minha história</S.Title>
       <History />
-    </Section>
+    </S.Section>
   );
 };
 
