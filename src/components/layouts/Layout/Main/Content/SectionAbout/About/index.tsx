@@ -20,12 +20,15 @@ const getFadeRightStyles = ({
   transform: visible ? '' : 'translateX(100%)',
 });
 
-const About: React.FC = () => {
-  const elementRef = React.useRef<HTMLDivElement | null>(null);
+type AboutProps = {
+  elementRef: React.MutableRefObject<HTMLDivElement | null>;
+};
+
+const About: React.FC<AboutProps> = ({ elementRef }) => {
   const isInViewport = useIsInViewport(elementRef);
 
   return (
-    <S.Container ref={elementRef}>
+    <S.Container>
       <p style={getFadeRightStyles({ visible: isInViewport })}>
         Meu nome é Karan,
       </p>
