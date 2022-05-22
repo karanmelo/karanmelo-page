@@ -16,8 +16,9 @@ export const Title = styled.h3`
 
   padding: 2rem;
 
+  color: var(--color-light-green);
   font-family: Amatic;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: left;
 `;
 
