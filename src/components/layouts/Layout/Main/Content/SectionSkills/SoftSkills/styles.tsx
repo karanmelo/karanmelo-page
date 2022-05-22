@@ -18,7 +18,7 @@ export const Title = styled.h3`
 
   font-family: Amatic;
   font-size: 3rem;
-  text-align: center;
+  text-align: left;
 `;
 
 export const Content = styled.div`
