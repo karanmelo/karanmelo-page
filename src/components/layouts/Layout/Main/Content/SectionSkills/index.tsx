@@ -1,13 +1,18 @@
 import React from 'react';
 
 import { HardSkills } from './HardSkills';
-import { Section } from './styles';
+import { SoftSkills } from './SoftSkills';
+import * as S from './styles';
 
 const SectionSkills: React.FC = () => {
   return (
-    <Section>
-      <HardSkills />
-    </Section>
+    <S.Section id="skills">
+      <S.Title>Skills</S.Title>
+      <S.Container>
+        <HardSkills />
+        <SoftSkills />
+      </S.Container>
+    </S.Section>
   );
 };
 
