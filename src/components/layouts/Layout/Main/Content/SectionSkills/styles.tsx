@@ -17,10 +17,11 @@ export const Title = styled.h2`
 
   color: var(--color-violet);
   font-family: Amatic;
-  font-size: 4rem;
+  font-size: 6rem;
   text-align: center;
 `;
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
 `;
