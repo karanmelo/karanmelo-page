@@ -43,6 +43,7 @@ export default createGlobalStyle`
     --color-medium-gray: #3c4858;
     --color-light-gray: #e5e5e5;
     --color-violet: #8719cc;
+    --color-light-green: #2ecc71;
   }
 
   * {
