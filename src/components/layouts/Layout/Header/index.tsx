@@ -4,7 +4,7 @@ import Home from './Home';
 import Menu from './Menu';
 import * as S from './styles';
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const [active, setActive] = useState(true);
 
   useEffect(() => {
@@ -24,5 +24,3 @@ const Header: React.FC = () => {
     </S.Header>
   );
 };
-
-export default Header;

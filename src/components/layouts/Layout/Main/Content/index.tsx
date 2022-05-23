@@ -9,7 +9,7 @@ import SectionHistory from './SectionHistory';
 import SectionSkills from './SectionSkills';
 import { Container } from './styles';
 
-const Content: React.FC = () => (
+export const Content: React.FC = () => (
   <Container>
     <SectionAbout />
     <SectionDivider background={SectionDividerBackgrounOptions.FULL_STACK} />
@@ -18,5 +18,3 @@ const Content: React.FC = () => (
     <SectionHistory />
   </Container>
 );
-
-export default Content;
