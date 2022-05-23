@@ -7,9 +7,15 @@ export type RatingProps = {
   label: string;
   value: number;
   quantity: number;
+  img: string;
 };
 
-export const Rating: React.FC<RatingProps> = ({ label, quantity, value }) => {
+export const Rating: React.FC<RatingProps> = ({
+  label,
+  quantity,
+  value,
+  img,
+}) => {
   const setColor = (rating: boolean) => {
     return rating ? '#FC0' : 'var(--color-light-gray)';
   };
@@ -32,7 +38,10 @@ export const Rating: React.FC<RatingProps> = ({ label, quantity, value }) => {
 
   return (
     <S.Container>
-      <S.Label>{label}</S.Label>
+      <S.Label>
+        {label}
+        <S.Icon src={img} />
+      </S.Label>
       <S.Content>{renderStars()}</S.Content>
     </S.Container>
   );

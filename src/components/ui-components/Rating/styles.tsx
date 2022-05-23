@@ -7,10 +7,17 @@ export const Container = styled.div`
 `;
 
 export const Label = styled.label`
+  display: inline-flex;
+  gap: 24px;
+
   font-family: Roboto;
   font-size: 1.8rem;
 `;
 
 export const Content = styled.div`
   display: flex;
+`;
+
+export const Icon = styled.img`
+  height: 6rem;
 `;
