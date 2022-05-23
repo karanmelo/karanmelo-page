@@ -13,6 +13,7 @@ export const Footer = styled.footer`
   z-index: 10;
 
   & p {
+    color: var(--font-color-white);
     font-size: 1.6rem;
   }
 `;
