@@ -74,7 +74,7 @@ const About: React.FC<AboutProps> = ({ elementRef }) => {
           delayTimeInSeconds: 2,
         })}
       >
-        Amo incondicionalmente a minha família.
+        Amo a minha família incondicionalmente.
       </p>
     </S.Container>
   );
