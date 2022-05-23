@@ -41,7 +41,7 @@ export const CustomThemeProvider: React.FC<{
       return darkTheme;
     }
 
-    return lightTheme;
+    return darkTheme;
   }, []);
 
   const [theme, setTheme] = useState<Theme>(getTheme());
