@@ -43,11 +43,10 @@ export const Card = styled.a`
   align-items: center;
   gap: 10px;
 
-  border: 1px solid var(--color-violet);
   border-radius: 8px;
-  box-shadow: 2px 4px 12px -6px var(--color-violet);
+  box-shadow: 2px 4px 12px -6px var(--color-gray);
 
-  transition: 0.5s all linear;
+  transition: 0.5s;
 
   cursor: pointer;
 
