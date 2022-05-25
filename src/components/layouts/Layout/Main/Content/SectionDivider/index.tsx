@@ -1,6 +1,7 @@
 import React from 'react';
 
-import FullStack from '../../../../../../assets/full-stack.png';
+import ConnectionsBackground from '../../../../../../assets/connections.png';
+import FullStackBackground from '../../../../../../assets/full-stack.png';
 import TechBackground from '../../../../../../assets/tech-background.jpg';
 import * as S from './styles';
 
@@ -8,12 +9,14 @@ import * as S from './styles';
 export enum SectionDividerBackgrounOptions {
   TECH = 'tech',
   FULL_STACK = 'fullStack',
+  CONNECTIONS = 'connections',
 }
 
 export type SectionDividerProps = {
   background:
     | SectionDividerBackgrounOptions.TECH
-    | SectionDividerBackgrounOptions.FULL_STACK;
+    | SectionDividerBackgrounOptions.FULL_STACK
+    | SectionDividerBackgrounOptions.CONNECTIONS;
 };
 
 const getSectionBaground = (option: SectionDividerBackgrounOptions) => {
@@ -21,7 +24,9 @@ const getSectionBaground = (option: SectionDividerBackgrounOptions) => {
     case SectionDividerBackgrounOptions.TECH:
       return TechBackground;
     case SectionDividerBackgrounOptions.FULL_STACK:
-      return FullStack;
+      return FullStackBackground;
+    case SectionDividerBackgrounOptions.CONNECTIONS:
+      return ConnectionsBackground;
     default:
       return TechBackground;
   }
