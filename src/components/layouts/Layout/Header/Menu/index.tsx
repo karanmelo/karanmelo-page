@@ -16,7 +16,7 @@ const Menu: React.FC = () => {
         <Item href="#history">História</Item>
       </NavItem>
       <NavItemButton>
-        <Item href="/contact">Contato</Item>
+        <Item href="#contacts">Contato</Item>
       </NavItemButton>
       <ThemeControl />
     </NavMenu>
