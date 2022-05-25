@@ -44,7 +44,12 @@ export const Card = styled.a`
   gap: 10px;
 
   border-radius: 8px;
-  box-shadow: 2px 4px 12px -6px var(--color-gray);
+  border: ${({ theme }) =>
+    theme.name === 'dark' ? '1px solid var(--color-violet)' : 'none'};
+  box-shadow: ${({ theme }) =>
+    theme.name === 'dark'
+      ? '2px 4px 12px -6px var(--color-violet)'
+      : '2px 4px 12px -6px var(--color-gray)'};
 
   transition: 0.5s;
 
