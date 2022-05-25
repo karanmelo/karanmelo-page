@@ -16,6 +16,7 @@ export const SectionContacts: React.FC = () => {
       <S.Title>Onde me achar</S.Title>
       <S.Content>
         <S.Card
+          title="LinkedIn"
           onClick={() =>
             handleCardOnClick(
               'https://www.linkedin.com/in/karan-melo-14098aa3/'
@@ -26,6 +27,7 @@ export const SectionContacts: React.FC = () => {
           <S.ContactLabel>LinkedIn</S.ContactLabel>
         </S.Card>
         <S.Card
+          title="Instagram"
           onClick={() =>
             handleCardOnClick('https://www.instagram.com/karan_melo/')
           }
@@ -34,12 +36,16 @@ export const SectionContacts: React.FC = () => {
           <S.ContactLabel>Instagram</S.ContactLabel>
         </S.Card>
         <S.Card
+          title="GitHub"
           onClick={() => handleCardOnClick('https://github.com/karanmelo')}
         >
           <S.ContactIcon src={GithubIcon} />
-          <S.ContactLabel>Github</S.ContactLabel>
+          <S.ContactLabel>GitHub</S.ContactLabel>
         </S.Card>
-        <S.Card href="mailto:karan.melo@gmail.com?subject=Ol%C3%A1%20Karan">
+        <S.Card
+          title="Gmail"
+          href="mailto:karan.melo@gmail.com?subject=Ol%C3%A1%20Karan"
+        >
           <S.ContactIcon src={Gmailcon} />
           <S.ContactLabel>Gmail</S.ContactLabel>
         </S.Card>
