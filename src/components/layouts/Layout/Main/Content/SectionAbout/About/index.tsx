@@ -43,7 +43,7 @@ const About: React.FC<AboutProps> = ({ elementRef }) => {
       <p
         style={getFadeRightStyles({
           visible: isInViewport,
-          delayTimeInSeconds: 1,
+          delayTimeInSeconds: 0.7,
         })}
       >
         Formado em Análise e Desenvolvimento de Sistemas pela Universidade Jorge
@@ -52,7 +52,7 @@ const About: React.FC<AboutProps> = ({ elementRef }) => {
       <p
         style={getFadeRightStyles({
           visible: isInViewport,
-          delayTimeInSeconds: 1.5,
+          delayTimeInSeconds: 0.9,
         })}
       >
         Atuo com desenvolvimento de software desde 2015 e tenho dedicado minha
@@ -61,7 +61,7 @@ const About: React.FC<AboutProps> = ({ elementRef }) => {
       <p
         style={getFadeRightStyles({
           visible: isInViewport,
-          delayTimeInSeconds: 2,
+          delayTimeInSeconds: 1.1,
         })}
       >
         Sou um grande entusiasta de novas tecnologias, gosto de estudar e
@@ -71,7 +71,7 @@ const About: React.FC<AboutProps> = ({ elementRef }) => {
       <p
         style={getFadeRightStyles({
           visible: isInViewport,
-          delayTimeInSeconds: 2,
+          delayTimeInSeconds: 1.3,
         })}
       >
         Amo a minha família incondicionalmente.
