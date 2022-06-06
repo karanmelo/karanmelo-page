@@ -13,7 +13,7 @@ export const SectionContacts: React.FC = () => {
 
   return (
     <S.Section id="contacts">
-      <S.Title>Onde me achar</S.Title>
+      <S.Title>Onde me encontrar</S.Title>
       <S.Content>
         <S.Card
           title="LinkedIn"
