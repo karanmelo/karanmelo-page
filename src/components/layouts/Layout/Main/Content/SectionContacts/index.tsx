@@ -44,7 +44,7 @@ export const SectionContacts: React.FC = () => {
         </S.Card>
         <S.Card
           title="Gmail"
-          href="mailto:karan.melo@gmail.com?subject=Ol%C3%A1%20Karan"
+          href="mailto:karan.melo@gmail.com?subject=Ol%C3%A1%20Karan,%20%3Cassunto%3E"
         >
           <S.ContactIcon src={Gmailcon} />
           <S.ContactLabel>Gmail</S.ContactLabel>
