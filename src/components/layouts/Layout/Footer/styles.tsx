@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { mediaQueries } from 'styles/mediaQueries';
 
 export const Footer = styled.footer`
+  position: absolute;
   width: 100%;
   height: 9rem;
 
