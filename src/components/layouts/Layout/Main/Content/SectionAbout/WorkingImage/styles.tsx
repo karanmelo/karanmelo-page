@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
-export const Container = styled.div<{ background: string }>`
+import Working from '../../../../../../../assets/working.png';
+
+export const Container = styled.div`
   width: 100%;
 
   display: flex;
 
-  background: ${({ background }) => `url(${background}) center no-repea`}t;
+  background: url(${Working.src}) center no-repeat;
   background-size: contain;
 `;
+

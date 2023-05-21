@@ -36,17 +36,14 @@ export const Input = styled.input`
   &:checked + div:before {
     left: -1.8rem;
 
-    background: url(${Sol}) 0% 0% no-repeat padding-box;
+    background: url(${Sol.src}) 0% 0% no-repeat padding-box;
     background-size: 3rem;
     transform: translateX(2.6rem);
   }
 `;
 
-type SliderProps = {
-  checked: boolean;
-};
 
-export const Slider = styled.div<SliderProps>`
+export const Slider = styled.div`
   position: absolute;
   top: 0;
   bottom: 0;
@@ -70,7 +67,7 @@ export const Slider = styled.div<SliderProps>`
     left: 3.9rem;
 
     content: '';
-    background: url(${Lua}) 0% 0% no-repeat padding-box;
+    background: url(${Lua.src}) 0% 0% no-repeat padding-box;
     background-size: 3rem;
     transition: 0.4s;
   }

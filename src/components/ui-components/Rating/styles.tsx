@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -18,6 +19,7 @@ export const Content = styled.div`
   display: flex;
 `;
 
-export const Icon = styled.img`
+export const Icon = styled(Image)`
+  width: auto;
   height: 6rem;
 `;

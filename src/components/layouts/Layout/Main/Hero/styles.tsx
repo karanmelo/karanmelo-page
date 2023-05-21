@@ -10,6 +10,6 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: url(${HeroBackground}) center no-repeat;
+  background: url(${HeroBackground.src}) center no-repeat;
   background-size: cover;
 `;

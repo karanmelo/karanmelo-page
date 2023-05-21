@@ -22,13 +22,13 @@ export type SectionDividerProps = {
 const getSectionBaground = (option: SectionDividerBackgrounOptions) => {
   switch (option) {
     case SectionDividerBackgrounOptions.TECH:
-      return TechBackground;
+      return TechBackground.src;
     case SectionDividerBackgrounOptions.FULL_STACK:
-      return FullStackBackground;
+      return FullStackBackground.src;
     case SectionDividerBackgrounOptions.CONNECTIONS:
-      return ConnectionsBackground;
+      return ConnectionsBackground.src;
     default:
-      return TechBackground;
+      return TechBackground.src;
   }
 };
 

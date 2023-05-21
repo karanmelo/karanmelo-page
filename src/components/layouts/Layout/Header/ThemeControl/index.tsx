@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useTheme } from '../../../../../hooks/theme';
+import { useTheme } from '../../../../../stores/theme-provider.store';
 import Checkbox from './Checkbox';
 
 const ThemeControl: React.FC = () => {

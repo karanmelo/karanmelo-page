@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticImageData } from 'next/image';
 
 import { StarIcon } from '../StarIcon';
 import * as S from './styles';
@@ -7,7 +8,7 @@ export type RatingProps = {
   label: string;
   value: number;
   quantity: number;
-  img: string;
+  img: StaticImageData;
 };
 
 export const Rating: React.FC<RatingProps> = ({
@@ -40,7 +41,7 @@ export const Rating: React.FC<RatingProps> = ({
     <S.Container>
       <S.Label>
         {label}
-        <S.Icon src={img} />
+        <S.Icon src={img} alt="" quality={100} />
       </S.Label>
       <S.Content>{renderStars()}</S.Content>
     </S.Container>

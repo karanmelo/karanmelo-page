@@ -60,8 +60,6 @@ export const Card = styled.a`
   }
 `;
 
-export const ContactIcon = styled.img``;
-
 export const ContactLabel = styled.h5`
   font-size: 1.6rem;
 `;

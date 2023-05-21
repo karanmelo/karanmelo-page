@@ -33,7 +33,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
           checked={checked}
           onChange={onChange}
         />
-        <Slider checked={checked || true} title={title} />
+        <Slider title={title} />
       </LabelSwitch>
     </Container>
   );

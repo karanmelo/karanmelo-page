@@ -1,6 +1,13 @@
 {
-  "short_name": "Karan Melo Page",
-  "name": "Karan Melo Page",
+  "short_name": "KaranMelo Page",
+  "name": "KaranMelo Page",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "./",
+  "scope": ".",
+  "prefer_related_applications": true,
   "icons": [
     {
       "src": "favicon.ico",
@@ -17,9 +24,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }

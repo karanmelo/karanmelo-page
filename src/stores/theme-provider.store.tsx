@@ -7,7 +7,7 @@ import React, {
   ReactNode,
 } from 'react';
 
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 import { lightTheme, darkTheme } from '../styles/themes';
 
@@ -28,23 +28,23 @@ const ThemeContext = createContext<ThemeContextData>({} as ThemeContextData);
 
 export const useTheme = () => useContext(ThemeContext);
 
-export const CustomThemeProvider: React.FC<{
+export const ThemeProvider: React.FC<{
   children: ReactNode | undefined;
 }> = ({ children }) => {
-  const getTheme = useCallback((): Theme => {
-    const localTheme: string = localStorage.getItem('KaranMeloPageTheme') || '';
+  // const getTheme = useCallback((): Theme => {
+  //   const localTheme: string = localStorage ? localStorage.getItem('KaranMeloPageTheme') || '';
 
-    if (localTheme === 'light') {
-      return lightTheme;
-    }
-    if (localTheme === 'dark') {
-      return darkTheme;
-    }
+  //   if (localTheme === 'light') {
+  //     return lightTheme;
+  //   }
+  //   if (localTheme === 'dark') {
+  //     return darkTheme;
+  //   }
 
-    return darkTheme;
-  }, []);
+  //   return darkTheme;
+  // }, []);
 
-  const [theme, setTheme] = useState<Theme>(getTheme());
+  const [theme, setTheme] = useState<Theme>(darkTheme);
 
   const toggleTheme = useCallback(() => {
     if (theme.name === 'light') {
@@ -65,9 +65,9 @@ export const CustomThemeProvider: React.FC<{
 
   return (
     <ThemeContext.Provider value={contextValue}>
-      <ThemeProvider theme={contextValue.theme}>
+      <StyledThemeProvider theme={contextValue.theme}>
         <>{children}</>
-      </ThemeProvider>
+      </StyledThemeProvider>
     </ThemeContext.Provider>
   );
 };
