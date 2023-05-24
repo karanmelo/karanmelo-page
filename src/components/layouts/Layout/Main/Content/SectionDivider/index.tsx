@@ -22,16 +22,20 @@ export type SectionDividerProps = {
 const getSectionBaground = (option: SectionDividerBackgrounOptions) => {
   switch (option) {
     case SectionDividerBackgrounOptions.TECH:
-      return TechBackground.src;
+      return TechBackground;
     case SectionDividerBackgrounOptions.FULL_STACK:
-      return FullStackBackground.src;
+      return FullStackBackground;
     case SectionDividerBackgrounOptions.CONNECTIONS:
-      return ConnectionsBackground.src;
+      return ConnectionsBackground;
     default:
-      return TechBackground.src;
+      return TechBackground;
   }
 };
 
 export const SectionDivider: React.FC<SectionDividerProps> = ({
   background,
-}) => <S.Section background={getSectionBaground(background)} />;
+}) => (
+  <S.Section>
+    <S.BackgroundSection src={getSectionBaground(background)} alt="" />
+  </S.Section>
+);

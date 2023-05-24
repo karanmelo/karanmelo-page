@@ -17,7 +17,7 @@ export const NavHome = styled.a`
 `;
 
 export const Logo = styled.img`
-  width: auto;
+  width: 4.8rem;
   height: 4.8rem;
   display: block;
 `;

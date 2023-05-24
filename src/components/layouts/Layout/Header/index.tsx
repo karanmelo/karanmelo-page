@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
   }, [active, isMounted]);
 
   return (
-    <S.Header active={active}>
+    <S.Header active={active === true}>
       <Home />
       <Menu />
     </S.Header>

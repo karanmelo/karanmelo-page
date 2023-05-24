@@ -42,7 +42,6 @@ export const Input = styled.input`
   }
 `;
 
-
 export const Slider = styled.div`
   position: absolute;
   top: 0;

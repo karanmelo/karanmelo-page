@@ -18,7 +18,9 @@ const Menu: React.FC = () => {
       <NavItemButton>
         <Item href="#contacts">Contato</Item>
       </NavItemButton>
-      <ThemeControl />
+      <NavItem>
+        <ThemeControl />
+      </NavItem>
     </NavMenu>
   );
 };

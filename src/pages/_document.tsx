@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
         originalRenderPage({
           enhanceApp: (App: any) => (props) =>
             sheet.collectStyles(<App {...props} />),
-        })
+        });
 
       const initialProps = await Document.getInitialProps(ctx);
       return {
@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
             {sheet.getStyleElement()}
           </>
         ),
-      }
+      };
     } finally {
       sheet.seal();
     }

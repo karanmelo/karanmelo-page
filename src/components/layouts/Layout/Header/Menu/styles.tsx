@@ -16,7 +16,7 @@ export const NavItem = styled.li`
 
   transition: 0.2s linear all;
 
-  &:hover {
+  &:hover:not(:last-child) {
     border-bottom: 4px solid var(--color-violet);
   }
 `;

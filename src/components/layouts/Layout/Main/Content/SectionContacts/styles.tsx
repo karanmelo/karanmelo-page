@@ -60,6 +60,7 @@ export const Card = styled.a`
   }
 `;
 
-export const ContactLabel = styled.h5`
+export const ContactLabel = styled.label`
   font-size: 1.6rem;
+  font-weight: 900;
 `;

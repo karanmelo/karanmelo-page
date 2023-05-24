@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { StaticImageData } from 'next/image';
 
 import { StarIcon } from '../StarIcon';

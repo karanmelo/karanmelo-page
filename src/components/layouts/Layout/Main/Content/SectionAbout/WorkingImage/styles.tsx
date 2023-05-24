@@ -10,4 +10,3 @@ export const Container = styled.div`
   background: url(${Working.src}) center no-repeat;
   background-size: contain;
 `;
-

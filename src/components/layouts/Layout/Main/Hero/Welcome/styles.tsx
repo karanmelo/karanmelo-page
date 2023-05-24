@@ -11,6 +11,8 @@ export const Container = styled.div`
 
   text-align: center;
 
+  z-index: 1;
+
   & * {
     color: var(--font-color-white);
   }

@@ -11,6 +11,7 @@ export default createGlobalStyle`
         url(${'./fonts/Roboto-Bold.ttf'}) format('truetype');
       font-weight: 300, 400, 700;
       font-style: normal;
+      font-display: swap;
   }
 
   @font-face {
@@ -19,6 +20,7 @@ export default createGlobalStyle`
         url(${'./fonts/ZenAntique-Regular.ttf'}) format('truetype');
       font-weight: 400;
       font-style: normal;
+      font-display: swap;
   }
 
 @font-face {
@@ -28,6 +30,7 @@ export default createGlobalStyle`
       url(${'./fonts/AmaticSC-Bold.ttf'}) format('truetype');
     font-weight: 400, 700;
     font-style: normal;
+      font-display: swap;
 }
 
   :root {
