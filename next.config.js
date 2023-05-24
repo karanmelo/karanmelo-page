@@ -1,29 +1,18 @@
-const path = require('path');
+/* eslint-disable @typescript-eslint/no-var-requires */
+// const withOffline = require('next-offline');
 
-const withOffline = require('next-offline');
-
-const withPWA = require("next-pwa")({
-  dest: "public",
-  register: true,
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  sw: 'service-worker.js',
+  register: false,
   skipWaiting: true,
+  disable: process.env.NODE_ENV === 'development',
 });
 
-const nextConfig = {
-  pwa: {
-    dest: 'public',
-    swSrc: 'service-worker.js'
+module.exports = withPWA({
+  i18n: {
+    locales: ['pt-br'],
+    defaultLocale: 'pt-br',
   },
   reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
-  },
-  generateInDevMode: false,
-  dontAutoRegisterSw: true,
-  generateSw: false,
-  workboxOpts: {
-    swDest: './service-worker.js',
-    swSrc: path.join(__dirname, 'public/sw.js'),
-  },
-};
-
-module.exports = withOffline(nextConfig);
+});
