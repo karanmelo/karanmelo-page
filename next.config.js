@@ -6,7 +6,6 @@ const withPWA = require('next-pwa')({
   sw: 'service-worker.js',
   register: false,
   skipWaiting: true,
-  disable: process.env.NODE_ENV === 'development',
 });
 
 module.exports = withPWA({
@@ -15,4 +14,7 @@ module.exports = withPWA({
     defaultLocale: 'pt-br',
   },
   reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
 });
