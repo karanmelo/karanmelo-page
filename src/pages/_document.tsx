@@ -11,6 +11,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           enhanceApp: (App: any) => (props) =>
             sheet.collectStyles(<App {...props} />),
         });
