@@ -18,9 +18,8 @@ export const Rating: React.FC<RatingProps> = ({
   value,
   img,
 }) => {
-  const setColor = (rating: boolean) => {
-    return rating ? '#FC0' : 'var(--color-light-gray)';
-  };
+  const setColor = (rating: boolean) =>
+    rating ? '#FC0' : 'var(--color-light-gray)';
 
   const renderStars = () => {
     const starsList = [];

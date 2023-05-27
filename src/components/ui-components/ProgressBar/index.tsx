@@ -12,14 +12,12 @@ export const ProgressBar: React.FC<ProgressProps> = ({
   progress,
   label,
   icon,
-}) => {
-  return (
-    <S.Container>
-      {label && <S.Header>{label}</S.Header>}
-      <S.Bar progress={progress}>
-        <S.BarPin progress={progress} />
-      </S.Bar>
-      <S.Label>{icon || `${progress}%`}</S.Label>
-    </S.Container>
-  );
-};
+}) => (
+  <S.Container>
+    {label && <S.Header>{label}</S.Header>}
+    <S.Bar progress={progress}>
+      <S.BarPin progress={progress} />
+    </S.Bar>
+    <S.Label>{icon || `${progress}%`}</S.Label>
+  </S.Container>
+);
