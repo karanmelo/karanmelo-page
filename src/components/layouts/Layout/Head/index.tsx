@@ -20,6 +20,7 @@ export const Head: React.FC = () => {
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta name="description" content="Description" />
       <meta name="keywords" content="Keywords" />
+      <meta name="theme-color" content="#363537" />
       <title>KaranMelo</title>
 
       <link rel="manifest" href="/manifest.json" />
