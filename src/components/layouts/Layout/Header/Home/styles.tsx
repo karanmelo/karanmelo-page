@@ -8,7 +8,7 @@ export const NavHome = styled.a`
   color: inherit;
   font-size: 1.8rem;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 900;
   opacity: 0.8;
 
   &::after {
