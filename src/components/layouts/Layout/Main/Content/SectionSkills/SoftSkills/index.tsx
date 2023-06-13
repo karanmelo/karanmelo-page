@@ -66,9 +66,6 @@ export const SoftSkills: React.FC = () => (
           img={CriativityIcon}
         />
       </S.RatingWrapper>
-      <S.RatingWrapper>
-        <Rating label="Liderança" value={4} quantity={5} img={LeadershipIcon} />
-      </S.RatingWrapper>
     </S.Content>
   </S.Container>
 );
