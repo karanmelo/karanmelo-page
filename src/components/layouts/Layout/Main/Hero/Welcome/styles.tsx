@@ -17,15 +17,25 @@ export const Container = styled.div`
     color: var(--font-color-white);
   }
 
-  & h2 {
+  & > h2 {
     font-size: 4.5rem;
   }
 
-  & p {
+  & > h3 {
+    font-size: 4rem;
+  }
+
+  & > p {
     font-size: 2.5rem;
   }
 
-  & a {
+  & > p > a {
+    &:hover {
+      color: var(--color-violet);
+    }
+  }
+
+  & > a {
     width: 16rem;
     min-height: 4rem;
     padding: 15px 8px;
