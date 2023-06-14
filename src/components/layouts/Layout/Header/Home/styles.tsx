@@ -6,7 +6,7 @@ export const NavHome = styled.a`
   gap: 15px;
 
   color: inherit;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 900;
   opacity: 0.8;

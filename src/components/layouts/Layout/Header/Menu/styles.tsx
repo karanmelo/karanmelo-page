@@ -9,7 +9,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   color: inherit;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
   opacity: 0.8;
@@ -18,6 +18,10 @@ export const NavItem = styled.li`
 
   &:hover:not(:last-child) {
     border-bottom: 4px solid var(--color-violet);
+
+    & > a {
+      font-weight: 900 !important;
+    }
   }
 `;
 
@@ -32,7 +36,7 @@ export const NavItemButton = styled.li`
   background-color: var(--color-violet);
   border-radius: 20px;
 
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-style: normal;
 
   cursor: pointer;
