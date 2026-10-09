@@ -12,8 +12,15 @@
 /.next/
 /out/
 
+# generated service worker (built by @serwist/next from src/sw.ts)
+/public/sw.js
+/public/sw.js.map
+
 # production
 /build
+
+# typescript
+tsconfig.tsbuildinfo
 
 # misc
 .DS_Store

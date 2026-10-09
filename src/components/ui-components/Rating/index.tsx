@@ -1,25 +1,21 @@
 import React from 'react';
 
-import { StaticImageData } from 'next/image';
-
 import { StarIcon } from '../StarIcon';
 import * as S from './styles';
 
-export type RatingProps = {
-  label: string;
+export interface RatingProps {
   value: number;
   quantity: number;
-  img: StaticImageData;
-};
+  accentColor?: string;
+}
 
 export const Rating: React.FC<RatingProps> = ({
-  label,
   quantity,
   value,
-  img,
+  accentColor = 'var(--color-violet)',
 }) => {
   const setColor = (rating: boolean) =>
-    rating ? '#FC0' : 'var(--color-light-gray)';
+    rating ? accentColor : 'var(--color-light-gray)';
 
   const renderStars = () => {
     const starsList = [];
@@ -29,7 +25,7 @@ export const Rating: React.FC<RatingProps> = ({
         <StarIcon
           key={starsList.length + 1}
           color={setColor(starsList.length < value)}
-          size={1.2}
+          size={1.4}
         />
       );
     }
@@ -37,13 +33,5 @@ export const Rating: React.FC<RatingProps> = ({
     return starsList;
   };
 
-  return (
-    <S.Container>
-      <S.Label>
-        {label}
-        <S.Icon src={img} alt="" quality={100} />
-      </S.Label>
-      <S.Content>{renderStars()}</S.Content>
-    </S.Container>
-  );
+  return <S.Content>{renderStars()}</S.Content>;
 };

@@ -1,41 +1,15 @@
 import React from 'react';
 
-import ConnectionsBackground from '../../../../../../assets/connections.png';
-import FullStackBackground from '../../../../../../assets/full-stack.png';
-import TechBackground from '../../../../../../assets/tech-background.jpg';
 import * as S from './styles';
 
-// eslint-disable-next-line no-shadow
-export enum SectionDividerBackgrounOptions {
-  TECH = 'tech',
-  FULL_STACK = 'fullStack',
-  CONNECTIONS = 'connections',
+export interface SectionDividerProps {
+  accent?: 'violet' | 'green';
 }
 
-export type SectionDividerProps = {
-  background:
-    | SectionDividerBackgrounOptions.TECH
-    | SectionDividerBackgrounOptions.FULL_STACK
-    | SectionDividerBackgrounOptions.CONNECTIONS;
-};
-
-const getSectionBaground = (option: SectionDividerBackgrounOptions) => {
-  switch (option) {
-    case SectionDividerBackgrounOptions.TECH:
-      return TechBackground;
-    case SectionDividerBackgrounOptions.FULL_STACK:
-      return FullStackBackground;
-    case SectionDividerBackgrounOptions.CONNECTIONS:
-      return ConnectionsBackground;
-    default:
-      return TechBackground;
-  }
-};
-
 export const SectionDivider: React.FC<SectionDividerProps> = ({
-  background,
+  accent = 'violet',
 }) => (
-  <S.Section>
-    <S.BackgroundSection src={getSectionBaground(background)} alt="" />
+  <S.Section $accent={accent}>
+    <S.Marker $accent={accent} />
   </S.Section>
 );

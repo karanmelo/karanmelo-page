@@ -16,6 +16,8 @@ interface Theme {
   colors: {
     body: string;
     text: string;
+    surface: string;
+    border: string;
   };
 }
 

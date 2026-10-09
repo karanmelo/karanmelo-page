@@ -1,66 +1,40 @@
 import styled from 'styled-components';
 
+import { mediaQueries } from 'styles/mediaQueries';
+
 export const Section = styled.section`
   width: 100%;
-  height: 512px;
 
-  padding: 18px;
+  padding: 4rem 2rem;
 
   display: flex;
   flex-direction: column;
 
   background-color: var(--background-theme);
+
+  ${mediaQueries('sm')`
+    padding: 4rem 6rem;
+  `};
 `;
 
 export const Title = styled.h2`
   width: 100%;
 
   color: var(--color-violet);
-  font-family: Amatic;
-  font-size: 6rem;
+  font-family: Poppins;
+  font-size: 3.6rem;
+  letter-spacing: 0.02em;
   text-align: center;
 `;
 
 export const Content = styled.div`
-  height: 100%;
+  flex: 1;
+
+  margin-top: 2rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-`;
-
-export const Card = styled.a`
-  min-width: 10rem;
-  min-height: 10rem;
-
-  padding: 12px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  border-radius: 8px;
-  border: ${({ theme }) =>
-    theme.name === 'dark' ? '1px solid var(--color-violet)' : 'none'};
-  box-shadow: ${({ theme }) =>
-    theme.name === 'dark'
-      ? '2px 4px 12px -6px var(--color-violet)'
-      : '2px 4px 12px -6px var(--color-gray)'};
-
-  transition: 0.5s;
-
-  cursor: pointer;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-`;
-
-export const ContactLabel = styled.label`
-  font-size: 1.6rem;
-  font-weight: 900;
 `;

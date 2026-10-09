@@ -11,17 +11,6 @@ export const Container = styled.div`
   gap: 30px;
 `;
 
-export const Title = styled.h3`
-  width: 100%;
-
-  padding: 2rem;
-
-  color: var(--color-light-green);
-  font-family: Amatic;
-  font-size: 4rem;
-  text-align: left;
-`;
-
 export const IconsContainer = styled.div`
   width: 100%;
 

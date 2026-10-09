@@ -1,23 +1,35 @@
 import styled from 'styled-components';
 
+import { mediaQueries } from 'styles/mediaQueries';
+
 export const Container = styled.div`
   width: 100%;
   height: 100%;
-  padding: 4rem 18rem;
+
+  padding: 4rem 2rem;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 30px;
+
+  ${mediaQueries('sm')`
+    padding: 4rem 6rem;
+  `};
+
+  ${mediaQueries('md')`
+    padding: 4rem 10rem;
+  `};
+
+  ${mediaQueries('lg')`
+    padding: 4rem 18rem;
+  `};
 `;
 
 export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+`;
 
-  font-size: 2rem;
+export const Timeline = styled.ol`
+  list-style: none;
 `;

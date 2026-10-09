@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Container, BackgroundImage } from './styles';
+import { Container, Grid } from './styles';
 import Welcome from './Welcome';
 
 export const Hero: React.FC = () => (
   <Container>
+    <Grid />
     <Welcome />
-    <BackgroundImage alt="" />
   </Container>
 );

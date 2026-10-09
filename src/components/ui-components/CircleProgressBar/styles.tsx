@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
-type ContainerProps = {
-  progress: number;
-  height: string;
-};
+interface ContainerProps {
+  $height: string;
+}
 
 export const Container = styled.div<ContainerProps>`
-  height: ${({ height }) => height};
-  width: ${({ height }) => height};
+  height: ${({ $height }) => $height};
+  width: ${({ $height }) => $height};
 
   display: flex;
   flex-direction: column;
@@ -23,4 +22,15 @@ export const Label = styled.h2`
   font-family: Roboto;
   text-transform: uppercase;
   transition: 0.5s;
+`;
+
+export const LevelBadge = styled.span<{ $color: string }>`
+  padding: 2px 10px;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: ${({ $color }) => $color};
+
+  border: 1px solid ${({ $color }) => $color};
+  border-radius: 999px;
 `;

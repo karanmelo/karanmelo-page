@@ -1,14 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-// const withOffline = require('next-offline');
-
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  sw: 'service-worker.js',
-  register: false,
-  skipWaiting: true,
+const withSerwist = require('@serwist/next').default({
+  swSrc: 'src/sw.ts',
+  swDest: 'public/sw.js',
+  disable: process.env.NODE_ENV === 'development',
 });
 
-module.exports = withPWA({
+module.exports = withSerwist({
   i18n: {
     locales: ['pt-br'],
     defaultLocale: 'pt-br',
@@ -17,4 +13,5 @@ module.exports = withPWA({
   images: {
     unoptimized: true,
   },
+  agentRules: false,
 });

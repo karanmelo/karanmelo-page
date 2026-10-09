@@ -14,20 +14,11 @@ export default createGlobalStyle`
       font-display: swap;
   }
 
-  @font-face {
-      font-family: 'ZenAntique';
-      src: local('ZenAntique'), local('ZenAntique'),
-        url(${'./fonts/ZenAntique-Regular.ttf'}) format('truetype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-  }
-
 @font-face {
-    font-family: 'Amatic';
-    src: local('Amatic'), local('Amatic'),
-      url(${'./fonts/AmaticSC-Regular.ttf'}) format('truetype'),
-      url(${'./fonts/AmaticSC-Bold.ttf'}) format('truetype');
+    font-family: 'Poppins';
+    src: local('Poppins'), local('Poppins'),
+      url(${'./fonts/Poppins-Regular.ttf'}) format('truetype'),
+      url(${'./fonts/Poppins-Bold.ttf'}) format('truetype');
     font-weight: 400, 700;
     font-style: normal;
       font-display: swap;
@@ -42,10 +33,14 @@ export default createGlobalStyle`
     --font-color-white: #fefefe;
     --font-color-black: #363537;
 
+    --color-surface: ${({ theme }) => theme.colors.surface};
+    --color-border: ${({ theme }) => theme.colors.border};
+
     --color-gray: #323437;
     --color-medium-gray: #3c4858;
     --color-light-gray: #e5e5e5;
     --color-violet: #8719cc;
+    --color-violet-dark: #4a0f72;
     --color-light-green: #2ecc71;
   }
 

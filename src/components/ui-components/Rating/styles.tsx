@@ -1,25 +1,6 @@
-import Image from 'next/image';
 import styled from 'styled-components';
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-`;
-
-export const Label = styled.label`
-  display: inline-flex;
-  gap: 24px;
-
-  font-family: Roboto;
-  font-size: 1.8rem;
-`;
 
 export const Content = styled.div`
   display: flex;
-`;
-
-export const Icon = styled(Image)`
-  width: auto;
-  height: 6rem;
+  gap: 6px;
 `;

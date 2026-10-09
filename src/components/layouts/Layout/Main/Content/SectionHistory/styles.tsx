@@ -16,7 +16,8 @@ export const Title = styled.h2`
   margin-top: 15px;
 
   color: var(--color-violet);
-  font-family: Amatic;
-  font-size: 6rem;
+  font-family: Poppins;
+  font-size: 3.6rem;
+  letter-spacing: 0.02em;
   text-align: center;
 `;

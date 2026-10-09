@@ -3,3 +3,4 @@ export * from './Floater';
 export * from './StarIcon';
 export * from './Rating';
 export * from './CircleProgressBar';
+export * from './ContactCard';

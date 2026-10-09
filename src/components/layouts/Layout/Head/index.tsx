@@ -1,18 +1,8 @@
-import { useEffect } from 'react';
-
 import NextHead from 'next/head';
 
-import { register, unregister } from 'next-offline/runtime';
-
 export const Head: React.FC = () => {
-  useEffect(() => {
-    register('/service-worker.js', { scope: '/' });
-
-    return () => {
-      unregister();
-    };
-  }, []);
-
+  // Service worker registration is handled automatically by @serwist/next
+  // (see next.config.js), no manual registration needed here.
   return (
     <NextHead>
       <meta charSet="utf-8" />

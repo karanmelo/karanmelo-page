@@ -1,21 +1,28 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 
 export const useIsInViewport = (
   ref: React.MutableRefObject<Element | null>
 ) => {
   const [isInViewPort, setIsInViewport] = useState(false);
 
-  const handleScroll = useCallback(() => {
-    if (!ref.current) return false;
-    const { bottom } = ref.current.getBoundingClientRect();
-    return setIsInViewport(window.innerHeight - bottom > 20);
-  }, [ref]);
-
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    const element = ref.current;
+    if (!element) return undefined;
 
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [ref, isInViewPort, handleScroll]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInViewport(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(element);
+
+    return () => observer.disconnect();
+  }, [ref]);
 
   return isInViewPort;
 };

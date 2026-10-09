@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const NavMenu = styled.ul`
   display: flex;
@@ -7,7 +7,11 @@ export const NavMenu = styled.ul`
   gap: 1.6em;
 `;
 
-export const NavItem = styled.li`
+interface NavItemProps {
+  $active?: boolean;
+}
+
+export const NavItem = styled.li<NavItemProps>`
   color: inherit;
   font-size: 1.8rem;
   font-style: normal;
@@ -23,6 +27,17 @@ export const NavItem = styled.li`
       font-weight: 900 !important;
     }
   }
+
+  ${({ $active }) =>
+    $active &&
+    css`
+      border-bottom: 4px solid var(--color-violet);
+      opacity: 1;
+
+      & > a {
+        font-weight: 900 !important;
+      }
+    `}
 `;
 
 export const NavItemButton = styled.li`

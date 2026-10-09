@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 20px;
@@ -16,7 +16,12 @@ export const Header = styled.div`
   color: ${(props) => props.theme.colors.text};
 `;
 
-export const Bar = styled.div<{ progress: number }>`
+interface BarProps {
+  $progress: number;
+  $color: string;
+}
+
+export const Bar = styled.div<BarProps>`
   height: 5px;
   width: 100%;
 
@@ -31,39 +36,20 @@ export const Bar = styled.div<{ progress: number }>`
     position: absolute;
     height: 100%;
     max-width: 100%;
-    width: ${(props) => props.progress}%;
+    width: ${({ $progress }) => $progress}%;
     min-width: 10%;
 
     border-radius: 8px;
 
     transition: all 0.6s linear 1s;
 
-    ${({ progress }) => {
-      if (progress < 25) {
-        return css`
-          background-color: #c0392b;
-        `;
-      }
-      if (progress < 75) {
-        return css`
-          background-color: #f1c40f;
-        `;
-      }
-      if (progress < 100) {
-        return css`
-          background-color: #3498db;
-        `;
-      }
-      return css`
-        background-color: #2ecc71;
-      `;
-    }}
+    background-color: ${({ $color }) => $color};
   }
 `;
 
-export const BarPin = styled.div<{ progress: number }>`
+export const BarPin = styled.div<BarProps>`
   position: absolute;
-  margin-left: ${({ progress }) => `calc(${progress}% - 10px)`};
+  margin-left: ${({ $progress }) => `calc(${$progress}% - 10px)`};
   top: -4px;
 
   width: 12px;
@@ -73,26 +59,7 @@ export const BarPin = styled.div<{ progress: number }>`
 
   transition: all 0.6s linear 1s;
 
-  ${({ progress }) => {
-    if (progress < 25) {
-      return css`
-        background-color: #c0392b;
-      `;
-    }
-    if (progress < 75) {
-      return css`
-        background-color: #f1c40f;
-      `;
-    }
-    if (progress < 100) {
-      return css`
-        background-color: #3498db;
-      `;
-    }
-    return css`
-      background-color: #2ecc71;
-    `;
-  }}
+  background-color: ${({ $color }) => $color};
 `;
 
 export const Label = styled.div`
@@ -102,4 +69,17 @@ export const Label = styled.div`
   font-family: Roboto;
   text-align: end;
   color: ${(props) => props.theme.colors.text};
+`;
+
+export const LevelBadge = styled.span<{ $color: string }>`
+  flex-shrink: 0;
+
+  padding: 2px 8px;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: ${({ $color }) => $color};
+
+  border: 1px solid ${({ $color }) => $color};
+  border-radius: 999px;
 `;

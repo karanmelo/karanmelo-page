@@ -16,13 +16,8 @@ export const Title = styled.h2`
   width: 100%;
 
   color: var(--color-violet);
-  font-family: Amatic;
-  font-size: 6rem;
+  font-family: Poppins;
+  font-size: 3.6rem;
+  letter-spacing: 0.02em;
   text-align: center;
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 `;

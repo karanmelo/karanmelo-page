@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { useTheme } from '../../../../../stores/theme-provider.store';
 import Checkbox from './Checkbox';
+import { useTheme } from '../../../../../stores/theme-provider.store';
 
 const ThemeControl: React.FC = () => {
   const { toggleTheme, theme } = useTheme();

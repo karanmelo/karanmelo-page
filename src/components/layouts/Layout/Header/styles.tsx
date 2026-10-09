@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 import { mediaQueries } from '../../../../styles/mediaQueries';
 
-type ContainerProps = {
+interface ContainerProps {
   active: boolean;
-};
+}
 
 export const Header = styled.header<ContainerProps>`
   position: fixed;

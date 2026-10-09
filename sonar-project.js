@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable no-underscore-dangle */
 const propertiesReader = require('properties-reader');
 const scanner = require('sonarqube-scanner');

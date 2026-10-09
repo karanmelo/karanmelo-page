@@ -2,45 +2,38 @@ import React from 'react';
 
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 
+import { getSkillLevelColor, getSkillLevelLabel } from '../skillLevel';
 import * as S from './styles';
 
-type CircleProgressProps = {
+interface CircleProgressProps {
   percentage: number;
   height: string;
   label?: string;
-};
+}
 
 export const CircleProgressBar: React.FC<CircleProgressProps> = ({
   percentage,
   height,
   label,
 }) => {
-  const setColor = (value: number) => {
-    if (value < 25) {
-      return '#c0392b';
-    }
-    if (value < 75) {
-      return '#f1c40f';
-    }
-    if (value < 90) {
-      return '#3498db';
-    }
-    return '#2ecc71';
-  };
+  const color = getSkillLevelColor(percentage);
 
   return (
-    <S.Container progress={percentage} height={height}>
+    <S.Container $height={height}>
       <CircularProgressbar
         value={percentage}
         text={`${percentage}%`}
         styles={buildStyles({
           textSize: '1.8rem',
-          pathColor: setColor(percentage),
+          pathColor: color,
           textColor: 'var(--font-color-theme)',
           trailColor: 'var(--color-light-gray)',
         })}
       />
       <S.Label>{label}</S.Label>
+      <S.LevelBadge $color={color}>
+        {getSkillLevelLabel(percentage)}
+      </S.LevelBadge>
     </S.Container>
   );
 };

@@ -1,47 +1,16 @@
 import styled from 'styled-components';
 
-type StarProps = {
+interface StarProps {
   color: string;
   size: number;
-};
+}
 
-export const Star = styled.i<StarProps>`
-  position: relative;
+export const Star = styled.svg<StarProps>`
+  width: ${({ size }) => `${size}rem`};
+  height: ${({ size }) => `${size}rem`};
+  flex-shrink: 0;
 
-  display: inline-block;
-  width: 0;
-  height: 0;
+  fill: ${({ color }) => color};
 
-  margin-left: 0.9em;
-  margin-right: 0.9em;
-  margin-bottom: 1.2em;
-
-  border-right: 0.3em solid transparent;
-  border-bottom: ${({ color }) => `0.7em solid ${color}`};
-  border-left: 0.3em solid transparent;
-
-  font-size: ${({ size }) => `${size}rem`};
-
-  &:before,
-  &:after {
-    content: '';
-
-    display: block;
-    width: 0;
-    height: 0;
-
-    position: absolute;
-    top: 0.6em;
-    left: -1em;
-
-    border-right: 1em solid transparent;
-    border-bottom: ${({ color }) => `0.7em solid ${color}`};
-    border-left: 1em solid transparent;
-
-    transform: rotate(-35deg);
-  }
-
-  &:after {
-    transform: rotate(35deg);
-  }
+  transition: fill 0.3s ease;
 `;

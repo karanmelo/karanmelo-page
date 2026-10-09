@@ -1,18 +1,21 @@
 import React from 'react';
 
+import { experiences } from './experiences';
 import * as S from './styles';
+import { TimelineItem } from './TimelineItem';
 
 const History: React.FC = () => (
   <S.Container>
     <S.Content>
-      <ol>
-        <li>nata.house</li>
-        <li>Zalpy</li>
-        <li>Makerplanet</li>
-        <li>Softwell</li>
-        <li>Universidade Jorge Amado</li>
-        <li>O resto da vida</li>
-      </ol>
+      <S.Timeline>
+        {experiences.map((entry, index) => (
+          <TimelineItem
+            key={entry.id}
+            entry={entry}
+            isLast={index === experiences.length - 1}
+          />
+        ))}
+      </S.Timeline>
     </S.Content>
   </S.Container>
 );
